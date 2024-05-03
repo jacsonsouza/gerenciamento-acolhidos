@@ -3,6 +3,67 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 
+:root {
+  --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+}
+.custom-background {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.background-home {
+  background-color: black !important;
+}
+
+.background-page-conctact {
+  background-image: url('../src/assets/img/aaaa.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.container {
+  padding-top: 36px; /* ajuste conforme necessário para garantir que o conteúdo não seja obscurecido pela GIF de fundo */
+}
+
+.custom-container {
+  margin-top: 100px; /* Adiciona 100px de margem superior */
+}
+
+.custom-body{
+  background: #030303 !important;
+} 
+
+.card {
+  background: #222;
+  border: 1px solid #dd2476;
+  color: rgba(250, 250, 250, 0.8);
+  margin-bottom: 2rem;
+}
+
+.btn {
+  border: 5px solid;
+  border-image-slice: 1;
+  background: var(--gradient) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  border-image-source:  var(--gradient) !important; 
+  text-decoration: none;
+  transition: all .4s ease;
+}
+
+.custom-card {
+  margin-top: 50px; /* Ajuste a altura da página de contatos conforme necessário */
+}
+
+.btn:hover, .btn:focus {
+      background: var(--gradient) !important;
+  -webkit-background-clip: none !important;
+  -webkit-text-fill-color: #fff !important;
+  border: 5px solid #fff !important; 
+  box-shadow: #222 1px 0 10px;
+  text-decoration: underline;
+}
 .carousel-wrapper {
     display: flex;
     justify-content: center;
@@ -51,9 +112,9 @@
   }
   
   .social-icon {
-    width: 20px; /* Defina o tamanho desejado para os ícones */
-    height: 20px; /* Defina o tamanho desejado para os ícones */
-    margin-right: 10px; /* Define o espaçamento entre os ícones */
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px;
   }
   
   
