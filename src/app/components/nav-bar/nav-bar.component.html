@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-black fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
       <img
         src="../../../assets/img/logo.png"
         alt="Logo do Albergue Noturno"
@@ -23,27 +23,34 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Página Inicial</a>
-        </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Agendamentos</a>
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            routerLink="/contatos"
+          <a class="nav-link"
+            routerLink="/home"
             routerLinkActive="active"
             ariaCurrentWhenActive="page"
-            >Contatos</a
-          >
+            >Página inicial</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Sobre nós</a>
+          <a class="nav-link" routerLink="/appointments" href="#"
+            >Agendamentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+            routerLink="/contacts"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Contatos </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+            routerLink="/about"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Sobre nós</a>
         </li>
         <li class="nav-item">
           <a class="nav-link">
-            Doação <i class="fas fa-user" style="margin-left: 25px"></i>
+            <i class="fas fa-user" style="margin-left: 25px"></i><!--  icone de usuário -->
             <i class="fas fa-caret-down"></i>
           </a>
         </li>
