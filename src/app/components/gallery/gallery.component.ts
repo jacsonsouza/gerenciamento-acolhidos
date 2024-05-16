@@ -1,15 +1,25 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',
-  standalone: true,
-  imports: [RouterLink, RouterOutlet, RouterLinkActive],
   templateUrl: './gallery.component.html',
-  styleUrl: './gallery.component.css'
+  styleUrls: ['./gallery.component.css']
 })
+export class GalleryComponent implements OnInit {
+  images: string[] = [
+    'https://via.placeholder.com/600x400',
+    'https://via.placeholder.com/600x400',
+    'https://via.placeholder.com/600x400'
+  ];
 
-export class GalleryComponent {
+  constructor() { }
 
+  ngOnInit(): void {
+  }
+
+  loadNextGallery() {
+    // Lógica para carregar outra galeria de fotos
+    // Aqui você pode atualizar this.images com outra lista de imagens
+    console.log('Próxima galeria carregada!');
+  }
 }

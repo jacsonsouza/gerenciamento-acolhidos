@@ -23,7 +23,7 @@
   background-attachment: fixed;
 }
 .container {
-  padding-top: 36px; /* ajuste conforme necessário para garantir que o conteúdo não seja obscurecido pela GIF de fundo */
+  padding-top: 36px; /* ajustar conforme necessário para garantir que o conteúdo não seja obscurecido pela GIF de fundo */
 }
 
 .custom-container {
@@ -34,27 +34,6 @@
   background: #030303 !important;
 } 
 
-.card {
-  background: #222;
-  border: 1px solid #dd2476;
-  color: rgba(250, 250, 250, 0.8);
-  margin-bottom: 2rem;
-}
-
-.btn {
-  border: 5px solid;
-  border-image-slice: 1;
-  background: var(--gradient) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  border-image-source:  var(--gradient) !important; 
-  text-decoration: none;
-  transition: all .4s ease;
-}
-
-.custom-card {
-  margin-top: 50px; /* Ajuste a altura da página de contatos conforme necessário */
-}
 
 .btn:hover, .btn:focus {
       background: var(--gradient) !important;
@@ -64,18 +43,7 @@
   box-shadow: #222 1px 0 10px;
   text-decoration: underline;
 }
-.carousel-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Alinhe os itens no centro verticalmente */
-    height: 100vh; /* Defina a altura do wrapper para ocupar toda a altura da tela */
-}
 
-.my-carousel img {
-    max-width: 80%; /* Defina a largura máxima da imagem para ocupar todo o espaço disponível */
-    max-height: 60vh; /* Defina a altura máxima da imagem para 80% da altura da tela */
-    object-fit: contain; /* Garanta que a imagem se ajuste ao contêiner */
-}
 .footer {
     background-color: #f0f0f0;
     padding: 50px 0;
@@ -108,7 +76,7 @@
   }
   
   .social-icons-container {
-    display: flex; /* Define um layout flexível */
+    display: flex; 
   }
   
   .social-icon {
