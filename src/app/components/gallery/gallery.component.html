@@ -1,0 +1,15 @@
+<div class="style-font-employees">
+  <h1>Calaboradores do albergue</h1>
+</div>
+<div class="gallery">
+  <div *ngFor="let photo of photos" class="photo-item">
+    <img [src]="photo.src" [alt]="photo.alt"
+      (click)="togglePhotoSelection(photo)"
+      [ngClass]="{'selected': photo === selectedPhoto}">
+  </div>
+</div>
+
+<div class="checklist" *ngIf="selectedPhoto"> 
+  <h3>Funcionários do albergue:</h3>
+  <p>{{ selectedPhoto.description }}</p> 
+</div>
