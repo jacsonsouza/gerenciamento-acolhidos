@@ -34,8 +34,8 @@ https://www.figma.com/file/xhnQ8NhLQjKzkEx3MRofXu/gereciamento-albergue?type=des
 
 #### RA4 - Implementar comunicação eficaz entre componentes, utilizando padrões de comunicação e serviços para compartilhar lógica e dados.
 
-- [ ] ID12: O aluno criou comunicação entre componentes não relacionados hierarquivamente por meio de serviços através do mecanismo de injeção de dependência, compartilhando lógica ou informações.
-- [ ] ID13: O aluno utilizou efetivamente as diretivas @Input e @Output para estabelecer uma comunicanção em uma hierarquia de componentes, passando e recebendo dados entre componentes de maneira segura e consistente.
+- [x] ID12: O aluno criou comunicação entre componentes não relacionados hierarquivamente por meio de serviços através do mecanismo de injeção de dependência, compartilhando lógica ou informações.
+- [x] ID13: O aluno utilizou efetivamente as diretivas @Input e @Output para estabelecer uma comunicanção em uma hierarquia de componentes, passando e recebendo dados entre componentes de maneira segura e consistente.
 
 #### RA5 - Criar interfaces de navegação intuitivas e responsivas, implementando roteamento em aplicações de página única (SPA).
 
@@ -65,7 +65,7 @@ https://www.figma.com/file/xhnQ8NhLQjKzkEx3MRofXu/gereciamento-albergue?type=des
 - Abrir o projeto no editor Visual Studio Code (VS Code)
 - Abrir um terminal pelo VSCode ou qualquer terminal do seu Sistema Operacional apontando para o diretório raiz do projeto
 - Instalar as dependências contidas no `package.json`
-  - Comando:  `npm i`
+  - Comando: `npm i`
 - (Opcional) Instalar o JSON Server globalmente disponível em `https://www.npmjs.com/package/json-server`
   - Comando: `npm i -g json-server`
   - É opcional porque a dependência já vem cadastrada no arquivo `package.json` para instalação logical na pasta `node_modules`

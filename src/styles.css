@@ -8,12 +8,12 @@
 }
 .custom-background {
   background-color: black;
-  color: white;
+  color: rgb(238, 224, 224);
   padding: 20px;
 }
 
 .background-home {
-  background-color: black !important;
+  background-color: rgb(238, 224, 224) !important;
 }
 
 .background-page-conctact {
@@ -23,11 +23,11 @@
   background-attachment: fixed;
 }
 .container {
-  padding-top: 36px; /* ajustar conforme necessário para garantir que o conteúdo não seja obscurecido pela GIF de fundo */
+  padding-top: 36px; 
 }
 
 .custom-container {
-  margin-top: 100px; /* Adiciona 100px de margem superior */
+  margin-top: 100px; 
 }
 
 .custom-body{
