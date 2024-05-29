@@ -1,5 +1,8 @@
+/* ID5: O aluno aplicou diretivas estruturais para renderizar elementos de forma condicional,
+ permitindo a exibição ou ocultação de conteúdo com base em condições dinâmicas. */
+
 import { Component } from '@angular/core';
-import { NgClass, NgFor, NgIf } from '@angular/common'; // Importe NgIf
+import { NgClass, NgFor, NgIf } from '@angular/common'; 
 
 interface Photo {
   src: string;
@@ -13,7 +16,7 @@ interface Photo {
   standalone: true,
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css'],
-  imports: [NgClass, NgFor, NgIf] // Inclua NgIf nos imports
+  imports: [NgClass, NgFor, NgIf]
 })
 export class GalleryComponent {
   photos: Photo[] = [
