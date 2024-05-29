@@ -7,9 +7,9 @@ body.custom-body {
 }
 
 .custom-background {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(2, 1, 1, 0.9); /* cor de fundo dos cards */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(17, 17, 17, 0.2);
   padding: 20px;
 }
 

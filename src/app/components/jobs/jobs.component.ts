@@ -1,5 +1,10 @@
+/* ID10: O aluno implementou a técnica de two-way data binding para criar uma sincronização 
+bidirecional automática entre a interface e o modelo de dados, permitindo uma atualização 
+eficiente dos dados em ambos os lados. */
+
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-jobs',
@@ -32,9 +37,9 @@ export class JobsComponent {
     this.submissionError = null;
     this.submissionSuccess = false;
 
-    // Replace with your actual logic to submit data (e.g., HTTP service)
+  
     console.log(this.formData);
-    // Simulate successful or failed submission (for demonstration)
+
     const randomNumber = Math.random();
     if (randomNumber > 0.5) {
       this.submissionSuccess = true;

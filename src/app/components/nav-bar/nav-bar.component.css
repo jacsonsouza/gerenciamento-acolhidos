@@ -2,3 +2,25 @@
     font-size: 25px; 
     font-weight: 900; /* Bold */
   }
+
+
+
+.navbar-nav {
+  display: flex;     
+  flex-wrap: nowrap; 
+  overflow-x: auto;  
+}
+
+
+.nav-item {
+  flex: 1;          
+  white-space: nowrap; 
+}
+
+
+.nav-item a {
+  font-size: 14px;  
+  padding: 5px 10px; 
+}
+
+

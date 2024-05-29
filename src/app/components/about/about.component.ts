@@ -1,3 +1,6 @@
+/* ID9: O aluno demonstrou a aplicação de técnicas de event binding para capturar eventos do
+ usuário na interface e interagir com o modelo de dados, mantendo a consistência e a 
+ sincronização entre os dois. */
 
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
