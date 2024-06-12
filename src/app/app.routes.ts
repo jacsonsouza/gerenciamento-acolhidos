@@ -4,6 +4,7 @@ import { AppointmentsComponent } from './components/appointments/appointments.co
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { AboutComponent } from './components/about/about.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -11,4 +12,5 @@ export const routes: Routes = [
   { path: 'contacts', component: ContactsComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'sign-up', component: SignUpComponent },
 ];
