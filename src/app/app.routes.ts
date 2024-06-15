@@ -5,9 +5,11 @@ import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormComponent } from './components/form/form.component';
 import { JobsComponent } from './components/jobs/jobs.component';
+import { LoginComponent } from './components/login/login.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'appointments', component: FormComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'gallery', component: GalleryComponent },
