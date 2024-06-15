@@ -11,6 +11,7 @@ import { HttpClient } from '@angular/common/http';
 import { FlashMessageService } from '../../services/flash-message/flash-message.service';
 import { FlashMessageComponent } from '../flash-message/flash-message.component';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -31,7 +32,8 @@ export class LoginComponent {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
-    private flashMessageService: FlashMessageService
+    private flashMessageService: FlashMessageService,
+    private router: Router
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -43,11 +45,14 @@ export class LoginComponent {
     this.authService
       .login(this.loginForm.value.email, this.loginForm.value.password)
       .subscribe({
-        next: (response) =>
+        next: (response) => {
+          if (response.type === 'success') this.router.navigate(['/']);
+
           this.flashMessageService.sendMessage({
             type: response.type,
             message: response.message,
-          }),
+          });
+        },
         error: (response) =>
           this.flashMessageService.sendMessage({
             type: response.type,

@@ -19,21 +19,21 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   login(email: string, password: string): Observable<FlashMessage> {
-    return this.http.post<User[]>(`${this.apiUrl}`, { email, password }).pipe(
+    return this.http.get<User[]>(this.apiUrl).pipe(
       map((users) => {
         const user = users.find((u) => u.email === email);
 
-        if (!user)
-          return { type: 'error', message: 'Incorrect datas.' } as FlashMessage;
-
-        if (user.password !== password)
-          return { type: 'error', message: 'Incorrect datas.' } as FlashMessage;
-
-        localStorage.setItem('currentUser', JSON.stringify(user));
+        if (user && user.password === password) {
+          localStorage.setItem('currentUser', JSON.stringify(user));
+          return {
+            type: 'success',
+            message: 'Usuário autenticado com sucesso!',
+          } as FlashMessage;
+        }
 
         return {
-          type: 'success',
-          message: 'User authenticated.',
+          type: 'error',
+          message: 'Credenciais inválidas.',
         } as FlashMessage;
       }),
       catchError((error) => {
@@ -44,5 +44,17 @@ export class AuthService {
         } as FlashMessage);
       })
     );
+  }
+
+  logout(): void {
+    localStorage.removeItem('currentUser');
+  }
+
+  isLoggedIn(): boolean {
+    return localStorage.getItem('currentUser') !== null;
+  }
+
+  getCurrentUser(): any {
+    return JSON.parse(localStorage.getItem('currentUser')!);
   }
 }
