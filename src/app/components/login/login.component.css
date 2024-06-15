@@ -5,3 +5,10 @@
 .mb-100 {
   margin-bottom: 100px;
 }
+
+.div-flex {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}

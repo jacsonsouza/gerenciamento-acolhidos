@@ -1,6 +1,5 @@
-<div
-  class="container form-container d-flex justify-content-center align-items-center mt-100 mb-100"
->
+<div class="container form-container div-flex mt-100 mb-100">
+  <app-flash-message></app-flash-message>
   <div class="col-md-6">
     <form (ngSubmit)="login()" class="p-4 shadow bg-white rounded">
       <div [formGroup]="loginForm">

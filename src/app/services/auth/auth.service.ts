@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map, of } from 'rxjs';
 import { User } from '../../Models/User/user';
+import { FlashMessage } from '../../interfaces/flash-message';
+import { environment } from '../../../environments/environment';
 
 interface AuthResult {
   success: boolean;
@@ -12,45 +14,34 @@ interface AuthResult {
   providedIn: 'root',
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:3000/admin';
+  private apiUrl = `${environment.apiUrl}/admin`;
 
   constructor(private http: HttpClient) {}
 
-  // login(email: string, password: string): Observable<boolean> {
-  //   return this.http.get<User[]>(`${this.baseUrl}?email=${email}`).pipe(
-  //     map((users) => {
-  //       if (users.length > 0) {
-  //         let exists = false;
-  //         users.forEach((user) => {
-  //           if (user.password === password) {
-  //             localStorage.setItem('currentUser', JSON.stringify(user));
-  //             exists = true;
-  //           }
-  //         });
-
-  //         return exists;
-  //       }
-  //       return false;
-  //     })
-  //   );
-
-  login(email: string, password: string): Observable<AuthResult> {
-    return this.http.get<User[]>(`${this.baseUrl}?email=${email}`).pipe(
+  login(email: string, password: string): Observable<FlashMessage> {
+    return this.http.post<User[]>(`${this.apiUrl}`, { email, password }).pipe(
       map((users) => {
         const user = users.find((u) => u.email === email);
 
-        if (!user) return { success: false, message: 'Incorrect datas.' };
+        if (!user)
+          return { type: 'error', message: 'Incorrect datas.' } as FlashMessage;
 
         if (user.password !== password)
-          return { success: false, message: 'Incorrect datas.' };
+          return { type: 'error', message: 'Incorrect datas.' } as FlashMessage;
 
         localStorage.setItem('currentUser', JSON.stringify(user));
 
-        return { success: true, message: 'User authenticated.' };
+        return {
+          type: 'success',
+          message: 'User authenticated.',
+        } as FlashMessage;
       }),
       catchError((error) => {
         console.log(error);
-        return of({ success: false, message: 'An error occurred' });
+        return of({
+          type: 'error',
+          message: 'An error occurred',
+        } as FlashMessage);
       })
     );
   }
