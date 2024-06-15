@@ -1,9 +1,7 @@
-
-
 <nav class="navbar navbar-expand-lg navbar-light bg-black fixed-top">
   <div class="container">
-    <h1 class="navbar-brand" style="color: white;">
-      <a href="/home" style="text-decoration: none; color: white;">
+    <h1 class="navbar-brand" style="color: white">
+      <a href="/" style="text-decoration: none; color: white">
         <img
           src="../../../assets/img/logo.png"
           alt="Logo do Albergue Noturno"
@@ -13,67 +11,46 @@
         Albergue Noturno
       </a>
     </h1>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link"
-            routerLink="/home"
-            routerLinkActive="active"
-            ariaCurrentWhenActive="page"
-            >Página inicial</a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Navegar
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a routerLink="/gallery" class="dropdown-item">Galeria de Fotos</a>
+            <a routerLink="/jobs" class="dropdown-item">Trabalhe Conosco</a>
+            <a routerLink="/about" class="dropdown-item">Sobre Nós</a>
+          </div>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" routerLink="/appointments" href="#"
-            >Agendamentos</a>
+            >Agendamentos</a
+          >
         </li>
+
         <li class="nav-item">
-          <a class="nav-link"
+          <a
+            class="nav-link"
             routerLink="/contacts"
             routerLinkActive="active"
             ariaCurrentWhenActive="page"
-            >Contatos </a>
+            >Contatos</a
+          >
         </li>
+
         <li class="nav-item">
-          <a class="nav-link"
-            routerLink="/gallery"
-            routerLinkActive="active"
-            ariaCurrentWhenActive="page"
-            >Galeria de fotos </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"
-            routerLink="/jobs"
-            routerLinkActive="active"
-            ariaCurrentWhenActive="page"
-            >Trabalhe conosco </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"
-            routerLink="/about"
-            routerLinkActive="active"
-            ariaCurrentWhenActive="page"
-            >Sobre </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-user" style="margin-right: 5px;"></i><!-- Ícone de usuário -->
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Entrar</a>
-            <a class="dropdown-item" href="#">Sair</a>
-          </div>
+          <a class="nav-link" href="#">Entrar</a>
         </li>
       </ul>
     </div>

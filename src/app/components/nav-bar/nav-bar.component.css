@@ -1,4 +1,16 @@
 .navbar-brand {
-    font-size: 25px; 
-    font-weight: 900; /* Bold */
-  }
+  font-size: 25px;
+  font-weight: 900; /* Bold */
+}
+
+.navbar-nav .nav-link {
+  margin-right: 1rem;
+}
+
+.dropdown-menu {
+  padding: 1rem;
+}
+
+.dropdown-item {
+  margin: 0.5rem 0;
+}

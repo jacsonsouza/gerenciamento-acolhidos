@@ -7,11 +7,10 @@ import { FormComponent } from './components/form/form.component';
 import { JobsComponent } from './components/jobs/jobs.component';
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'appointments', component: FormComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'about', component: AboutComponent },
   { path: 'jobs', component: JobsComponent },
- 
 ];

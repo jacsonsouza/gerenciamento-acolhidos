@@ -1,0 +1,11 @@
+{
+  "admin": [
+    {
+      "id": "0331",
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "123456789"
+    }
+  ],
+  "appointments": []
+}
