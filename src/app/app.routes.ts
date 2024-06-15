@@ -11,7 +11,6 @@ import { LoginComponent } from './components/login/login.component';
 import { PartnershipsComponent } from './components/partnerships/partnerships.component';
 import { FilterComponent } from './components/filter/filter.component';
 
-
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
