@@ -49,8 +49,27 @@
           >
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="!isLoggedIn()">
           <a class="nav-link" href="/login">Entrar</a>
+        </li>
+
+        <li class="nav-item dropdown" *ngIf="isLoggedIn()">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Opções
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a routerLink="/gallery" class="dropdown-item">Gerenciar</a>
+            <a routerLink="/jobs" class="dropdown-item">Agendamentos</a>
+            <a routerLink="/" class="dropdown-item" (click)="logout()">Sair</a>
+          </div>
         </li>
       </ul>
     </div>
