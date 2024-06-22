@@ -9,6 +9,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { AppointmentService } from '../../services/appointment/appointment.service';
+import { Status } from '../../enums/appointment/status';
 
 @Component({
   selector: 'app-form',
@@ -36,6 +37,7 @@ export class FormComponent {
       city: ['', Validators.required],
       phone: ['', Validators.required],
       observation: ['', Validators.required],
+      status: [Status.Pending],
     });
   }
 

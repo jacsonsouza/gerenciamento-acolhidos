@@ -1,0 +1,16 @@
+.container {
+  margin-bottom: 30px;
+}
+
+.card {
+  margin: 20px;
+}
+
+.m-100 {
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+
+.card-link {
+  text-decoration: none;
+}

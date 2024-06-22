@@ -9,17 +9,18 @@
   ],
   "appointments": [
     {
-      "id": "6014",
-      "name": "Test",
-      "last_name": "Tests",
-      "cpf": "12345678900",
-      "mother_name": "Teste 123",
-      "date": "2024-06-20",
-      "time": "17:30",
+      "id": "46f8",
+      "name": "Maria",
+      "last_name": "Antonieta",
+      "cpf": "122116654648",
+      "mother_name": "Não sei",
+      "date": "2024-06-21",
+      "time": "17:04",
       "state": "PR",
       "city": "Guarapuava",
       "phone": "42999400953",
-      "observation": "Teste"
+      "observation": "Preciso de uma parada enquanto viajo",
+      "status": "accepted"
     }
   ]
 }

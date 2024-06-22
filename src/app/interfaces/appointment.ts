@@ -1,4 +1,7 @@
+import { Status } from '../enums/appointment/status';
+
 export interface Appointment {
+  id: number;
   name: string;
   last_name: string;
   cpf: string;
@@ -9,4 +12,5 @@ export interface Appointment {
   city: string;
   phone: string;
   observation: string;
+  status: Status;
 }

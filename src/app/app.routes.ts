@@ -6,6 +6,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FormComponent } from './components/form/form.component';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { LoginComponent } from './components/login/login.component';
+import { authGuard } from './auth/auth.guard';
+import { AppointmentsListComponent } from './components/appointments-list/appointments-list.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,4 +17,9 @@ export const routes: Routes = [
   { path: 'gallery', component: GalleryComponent },
   { path: 'about', component: AboutComponent },
   { path: 'jobs', component: JobsComponent },
+  {
+    path: 'appointments-list',
+    component: AppointmentsListComponent,
+    canActivate: [authGuard],
+  },
 ];
