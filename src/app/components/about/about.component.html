@@ -1,25 +1,30 @@
-
 <!-- ID9: O aluno demonstrou a aplicação de técnicas de event binding para capturar eventos do
  usuário na interface e interagir com o modelo de dados, mantendo a consistência e a 
  sincronização entre os dois. -->
- 
+
 <body class="background-page-conctact">
-
-<div class="container py-5 custom-container">
-  <div class="row">
-    <div class="col-md-6">
-      <img src="../../../assets/img/logo_grande.png" class="img-fluid" alt="Imagem da Empresa">
-    </div>
-    <div class="col-md-6 text-white">
-      <h2>{{ title_about }}</h2>
-      <div *ngFor="let paragraph of paragraphs">
-        <p [textContent]="paragraph"></p> 
+  <div class="container py-5 custom-container">
+    <div class="row">
+      <div class="col-md-6">
+        <img
+          src="assets/img/logo_grande.png"
+          class="img-fluid"
+          alt="Imagem da Empresa"
+        />
       </div>
+      <div class="col-md-6 text-white">
+        <h2>{{ title_about }}</h2>
+        <div *ngFor="let paragraph of paragraphs">
+          <p [textContent]="paragraph"></p>
+        </div>
 
-<button (click)="showMore()" [disabled]="paragraphs.length === allParagraphs.length">Mostrar Mais</button>
+        <button
+          (click)="showMore()"
+          [disabled]="paragraphs.length === allParagraphs.length"
+        >
+          Mostrar Mais
+        </button>
+      </div>
     </div>
   </div>
-</div>
-
 </body>
-
