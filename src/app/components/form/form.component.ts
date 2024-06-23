@@ -11,11 +11,18 @@ import {
 import { AppointmentService } from '../../services/appointment/appointment.service';
 import { Status } from '../../enums/appointment/status';
 import { LocaleService } from '../../services/locale/locale.service';
+import { FlashMessageService } from '../../services/flash-message/flash-message.service';
+import { FlashMessageComponent } from '../flash-message/flash-message.component';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, FormsModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
+    FlashMessageComponent,
+  ],
   providers: [HttpClient],
   templateUrl: './form.component.html',
   styleUrl: './form.component.css',
@@ -29,6 +36,7 @@ export class FormComponent {
   constructor(
     private fb: FormBuilder,
     private locale: LocaleService,
+    private flashMessageService: FlashMessageService,
     private appointment: AppointmentService
   ) {
     this.registerForm = this.fb.group({
@@ -66,13 +74,21 @@ export class FormComponent {
   }
 
   register(): void {
-    this.appointment.createAppointment(this.registerForm.value).subscribe({
-      next: (response) => {
-        alert(response);
-      },
-      error: (response) => {
-        alert(response);
-      },
-    });
+    if (this.registerForm.valid) {
+      this.appointment.createAppointment(this.registerForm.value).subscribe({
+        next: (response) => {
+          alert(response);
+        },
+        error: (response) => {
+          alert(response);
+        },
+      });
+    } else {
+      this.flashMessageService.sendMessage({
+        type: 'error',
+        message: 'Formulário inválido. Verifique os campos obrigatórios.',
+      }),
+        this.registerForm.markAllAsTouched();
+    }
   }
 }

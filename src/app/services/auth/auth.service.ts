@@ -40,7 +40,7 @@ export class AuthService {
         console.log(error);
         return of({
           type: 'error',
-          message: 'An error occurred',
+          message: 'Alguns erros ocorreram!',
         } as FlashMessage);
       })
     );

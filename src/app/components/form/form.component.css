@@ -57,3 +57,7 @@ label {
     margin: auto;
   }
 }
+
+.btn-link {
+  border: none;
+}

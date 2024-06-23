@@ -53,11 +53,13 @@ export class LoginComponent {
             message: response.message,
           });
         },
-        error: (response) =>
+        error: (response) => {
+          this.loginForm.markAllAsTouched();
           this.flashMessageService.sendMessage({
             type: response.type,
             message: response.message,
-          }),
+          });
+        },
       });
   }
 }
