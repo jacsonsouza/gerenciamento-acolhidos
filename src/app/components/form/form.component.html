@@ -85,23 +85,24 @@
         <div class="form-group row">
           <div class="col-md-6">
             <label for="state">Estado:</label>
-            <input
-              type="text"
+            <select
               class="form-control"
               id="state"
               formControlName="state"
-              placeholder="Digite seu estado"
-            />
+              (change)="onStateChange($event)"
+            >
+              <option *ngFor="let state of states" [value]="state.id">
+                {{ state.sigla }}
+              </option>
+            </select>
           </div>
           <div class="col-md-6">
             <label for="city">Cidade:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="city"
-              formControlName="city"
-              placeholder="Digite sua cidade"
-            />
+            <select class="form-control" id="city" formControlName="city">
+              <option *ngFor="let city of cities" [value]="city.id">
+                {{ city.nome }}
+              </option>
+            </select>
           </div>
         </div>
         <div class="form-group row">
