@@ -9,6 +9,8 @@ import { JobsComponent } from './components/jobs/jobs.component';
 import { PartnershipsComponent } from './components/partnerships/partnerships.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { LoginComponent } from './components/login/login.component';
+import { authGuard } from './auth/auth.guard';
+import { AppointmentsListComponent } from './components/appointments-list/appointments-list.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,4 +23,9 @@ export const routes: Routes = [
   { path: 'prayer', component: PrayerComponent },
   { path: 'partneships', component: PartnershipsComponent },
   { path: 'filter', component: FilterComponent },
+  {
+    path: 'appointments-list',
+    component: AppointmentsListComponent,
+    canActivate: [authGuard],
+  },
 ];

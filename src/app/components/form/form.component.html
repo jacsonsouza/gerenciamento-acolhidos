@@ -1,113 +1,137 @@
 <div class="bg-appointments">
   <div class="container-fluid centralize">
-    <div class="form-container">
-      <div class="form-group row">
-        <div class="col-md-6">
-          <label for="nome">Nome:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="nome"
-            placeholder="Digite seu nome"
-          />
+    <form (ngSubmit)="register()">
+      <div class="form-container" [formGroup]="registerForm">
+        <div class="form-group row">
+          <div class="col-md-6">
+            <label for="name">Nome:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              formControlName="name"
+              placeholder="Digite seu nome"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="last_name">Sobrenome:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="last_name"
+              formControlName="last_name"
+              placeholder="Digite seu sobrenome"
+            />
+          </div>
         </div>
-        <div class="col-md-6">
-          <label for="email">Sobrenome:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="Sobrenome"
-            placeholder="Digite seu sobrenome"
-          />
+        <div class="form-group row">
+          <div class="col-md-6">
+            <label for="cpf">Cpf:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cpf"
+              formControlName="cpf"
+              placeholder="Digite seu Cpf"
+            />
+            <button
+              type="button"
+              class="btn btn-link"
+              data-toggle="modal"
+              data-target="#infoCpf"
+            >
+              Leia mais
+            </button>
+          </div>
+          <div class="col-md-6">
+            <label for="mother_name">Nome da mãe:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="mother_name"
+              formControlName="mother_name"
+              placeholder="Digite o nome de seu sua mãe"
+            />
+            <button
+              type="button"
+              class="btn btn-link"
+              data-toggle="modal"
+              data-target="#infoNomeMae"
+            >
+              Leia mais
+            </button>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-6">
+            <label for="data">Data de chegada:</label>
+            <input
+              type="date"
+              class="form-control"
+              id="data"
+              formControlName="date"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="time">Hora de chegada:</label>
+            <input
+              type="time"
+              class="form-control"
+              id="time"
+              formControlName="time"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-6">
+            <label for="state">Estado:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="state"
+              formControlName="state"
+              placeholder="Digite seu estado"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="city">Cidade:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="city"
+              formControlName="city"
+              placeholder="Digite sua cidade"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-6">
+            <label for="phone">Telefone para contato</label>
+            <input
+              type="telefone"
+              class="form-control"
+              id="phone"
+              formControlName="phone"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="observation">Motivo da hospedagem:</label>
+            <textarea
+              class="form-control"
+              id="observation"
+              formControlName="observation"
+              rows="1"
+              placeholder="Digite suas observações"
+            ></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-custom">Cadastrar</button>
+          </div>
         </div>
       </div>
-      <div class="form-group row">
-        <div class="col-md-6">
-          <label for="cpf">Cpf:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="cpf"
-            placeholder="Digite seu Cpf"
-          />
-          <button
-            type="button"
-            class="btn btn-link"
-            data-toggle="modal"
-            data-target="#infoCpf"
-          >
-            Leia mais
-          </button>
-        </div>
-        <div class="col-md-6">
-          <label for="nome_mae">Nome da mãe:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="nome_mae"
-            placeholder="Digite o nome de seu sua mãe"
-          />
-          <button
-            type="button"
-            class="btn btn-link"
-            data-toggle="modal"
-            data-target="#infoNomeMae"
-          >
-            Leia mais
-          </button>
-        </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-md-6">
-          <label for="data">Data de chegada:</label>
-          <input type="date" class="form-control" id="data" />
-        </div>
-        <div class="col-md-6">
-          <label for="hora">Hora de chegada:</label>
-          <input type="time" class="form-control" id="hora" />
-        </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-md-6">
-          <label for="estado">Estado:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="estado"
-            placeholder="Digite seu estado"
-          />
-        </div>
-        <div class="col-md-6">
-          <label for="cidade">Cidade:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="cidade"
-            placeholder="Digite sua cidade"
-          />
-        </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-md-6">
-          <label for="telefone">Telefone para contato</label>
-          <input type="telefone" class="form-control" id="telefone" />
-        </div>
-        <div class="col-md-6">
-          <label for="observacoes">Motivo da hospedagem:</label>
-          <textarea
-            class="form-control"
-            id="observacoes"
-            rows="1"
-            placeholder="Digite suas observações"
-          ></textarea>
-        </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-md-12">
-          <button type="button" class="btn btn-custom">Cadastrar</button>
-        </div>
-      </div>
-    </div>
+    </form>
   </div>
 
   <!-- Modal CPF -->
