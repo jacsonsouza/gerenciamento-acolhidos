@@ -24,3 +24,6 @@
 }
 
 
+.navbar-nav {
+  position: relative; /* Permite que o dropdown seja posicionado corretamente */
+}

@@ -1,17 +1,26 @@
-<!-- ID5: O aluno aplicou diretivas estruturais para renderizar elementos de forma condicional,
- permitindo a exibição ou ocultação de conteúdo com base em condições dinâmicas.  -->
+<!-- ID11: O aluno fez uso eficaz de variáveis de template para manipulação dinâmica dos dados 
+na interface gráfica, demonstrando a capacidade de exibir informações de maneira flexível 
+e adaptável.  -->
 <div class="style-font-employees">
-  <h1>Calaboradores do albergue</h1>
+  <h1>Colaboradores do Albergue</h1>
 </div>
+
+<h2>Fotos dos nossos Colaboradores</h2> 
+
 <div class="gallery">
-  <div *ngFor="let photo of photos" class="photo-item">
+  <div *ngFor="let photo of photos" class="photo-item"
+       (mouseenter)="showDescription(photo)" (mouseleave)="hideDescription(photo)">
     <img [src]="photo.src" [alt]="photo.alt"
-      (click)="togglePhotoSelection(photo)"
-      [ngClass]="{'selected': photo === selectedPhoto}">
+         (click)="togglePhotoSelection(photo)"
+         [ngClass]="{'selected': photo === selectedPhoto}">
+
+    <div class="description-overlay" *ngIf="photo.selected">
+      <p>{{ photo.description }}</p>
+    </div>
   </div>
 </div>
 
-<div class="checklist" *ngIf="selectedPhoto"> 
-  <h3>Funcionários do albergue:</h3>
-  <p>{{ selectedPhoto.description }}</p> 
+<div class="checklist" *ngIf="selectedPhoto">
+  <h3>Funcionários do Albergue:</h3>
+  <p>{{ selectedPhoto.details }}</p> 
 </div>

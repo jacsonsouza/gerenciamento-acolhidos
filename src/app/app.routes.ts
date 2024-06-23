@@ -8,6 +8,8 @@ import { FormComponent } from './components/form/form.component';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { PartnershipsComponent } from './components/partnerships/partnerships.component';
 import { FilterComponent } from './components/filter/filter.component';
+
+
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'appointments', component: FormComponent },

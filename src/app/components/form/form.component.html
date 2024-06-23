@@ -1,110 +1,126 @@
 <body>
-  <!-- <div class="header">
-      <h2>Cadastro de Agendamento</h2>
-  </div> -->
-  <div class="container-fluid">
-      <div class="form-container">
-          <div class="form-group row">
-              <div class="col-md-6">
-                  <label for="nome">Nome:</label>
-                  <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
-              </div>
-              <div class="col-md-6">
-                  <label for="email">Sobrenome:</label>
-                  <input type="text" class="form-control" id="Sobrenome" placeholder="Digite seu sobrenome">
-              </div>
-          </div>
-          <div class="form-group row">
-              <div class="col-md-6">
-                  <label for="cpf">Cpf:</label>
-                  <input type="text" class="form-control" id="cpf" placeholder="Digite seu Cpf">
-                  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#infoCpf">Leia mais</button>
-              </div>
-              <div class="col-md-6">
-                  <label for="nome_mae">Nome da mãe:</label>
-                  <input type="text" class="form-control" id="nome_mae" placeholder="Digite o nome de seu sua mãe">
-                  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#infoNomeMae">Leia mais</button>
-              </div>
-          </div>
-          <div class="form-group row">
-              <div class="col-md-6">
-                  <label for="data">Data de chegada:</label>
-                  <input type="date" class="form-control" id="data">
-              </div>
-              <div class="col-md-6">
-                  <label for="hora">Hora de chegada:</label>
-                  <input type="time" class="form-control" id="hora">
-              </div>
-          </div>
-          <div class="form-group row">
-              <div class="col-md-6">
-                  <label for="estado">Estado:</label>
-                  <input type="text" class="form-control" id="estado" placeholder="Digite seu estado">
-              </div>
-              <div class="col-md-6">
-                  <label for="cidade">Cidade:</label>
-                  <input type="text" class="form-control" id="cidade" placeholder="Digite sua cidade">
-              </div>
-          </div>
-          <div class="form-group row">
-              <div class="col-md-6">
-                  <label for="telefone">Telefone para contato</label>
-                  <input type="telefone" class="form-control" id="telefone">
-              </div>
-              <div class="col-md-6">
-                  <label for="observacoes">Motivo da hospedagem:</label>
-                  <textarea class="form-control" id="observacoes" rows="1" placeholder="Digite suas observações"></textarea>
-              </div>
-          </div>
-          <div class="form-group row">
-              <div class="col-md-12">
-                  <button type="button" class="btn btn-custom">Cadastrar</button>
-              </div>
-          </div>
-      </div>
-  </div>
-
-  <!-- Modal CPF -->
-  <div class="modal fade" id="infoCpf" tabindex="-1" role="dialog" aria-labelledby="infoCpfLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="infoCpfLabel">Informações sobre o CPF</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body">
-                  O CPF é necessário para identificação no albergue. Ele será utilizado para garantir que a reserva é feita para você.
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-              </div>
-          </div>
-      </div>
-  </div>
-
-  <!-- Modal Nome da Mãe -->
-  <div class="modal fade" id="infoNomeMae" tabindex="-1" role="dialog" aria-labelledby="infoNomeMaeLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="infoNomeMaeLabel">Informações sobre o Nome da Mãe</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body">
-                  O nome da mãe é necessário para identificação no albergue. Ele será utilizado para garantir que a reserva é feita para você.
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-              </div>
-          </div>
-      </div>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    <!-- <div class="header">
+        <h2>Cadastro de Agendamento</h2>
+    </div> -->
+    <div class="container-fluid">
+        <div class="form-container">
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="col-md-6">
+                    <label for="Sobrenome">Sobrenome:</label>
+                    <input type="text" class="form-control" id="Sobrenome" placeholder="Digite seu sobrenome">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="cpf">Cpf:</label>
+                    <input type="text" class="form-control" id="cpf" placeholder="Digite seu Cpf">
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#infoCpf">Leia mais</button>
+                </div>
+                <div class="col-md-6">
+                    <label for="nome_mae">Nome da mãe:</label>
+                    <input type="text" class="form-control" id="nome_mae" placeholder="Digite o nome de sua mãe">
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#infoNomeMae">Leia mais</button>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="data">Data de chegada:</label>
+                    <input type="date" class="form-control" id="data">
+                </div>
+                <div class="col-md-6">
+                    <label for="hora">Hora de chegada:</label>
+                    <input type="time" class="form-control" id="hora">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="estado">Estado:</label>
+                    <input type="text" class="form-control" id="estado" placeholder="Digite seu estado">
+                </div>
+                <div class="col-md-6">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" class="form-control" id="cidade" placeholder="Digite sua cidade">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="telefone">Telefone para contato:</label>
+                    <input type="text" class="form-control" id="telefone" placeholder="Digite seu telefone">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="noPhoneCheck">
+                        <label class="form-check-label" for="noPhoneCheck">Não tenho telefone</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="observacoes">Motivo da hospedagem:</label>
+                    <textarea class="form-control" id="observacoes" rows="1" placeholder="Digite suas observações"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-custom">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Modal CPF -->
+    <div class="modal fade" id="infoCpf" tabindex="-1" role="dialog" aria-labelledby="infoCpfLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoCpfLabel">Informações sobre o CPF</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    O CPF é necessário para identificação no albergue. Ele será utilizado para garantir que a reserva é feita para você.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Modal Nome da Mãe -->
+    <div class="modal fade" id="infoNomeMae" tabindex="-1" role="dialog" aria-labelledby="infoNomeMaeLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoNomeMaeLabel">Informações sobre o Nome da Mãe</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    O nome da mãe é necessário para identificação no albergue. Ele será utilizado para garantir que a reserva é feita para você.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('noPhoneCheck').addEventListener('change', function() {
+            const phoneInput = document.getElementById('telefone');
+            if (this.checked) {
+                phoneInput.disabled = true;
+                phoneInput.value = '';
+            } else {
+                phoneInput.disabled = false;
+            }
+        });
+    </script>
+  </body>
+  
