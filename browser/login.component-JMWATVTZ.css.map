@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/login/login.component.css"],
+  "sourcesContent": [".mt-100 {\n  margin-top: 200px;\n}\n\n.mb-100 {\n  margin-bottom: 100px;\n}\n\n.div-flex {\n  display: flex;\n  flex-direction: column;\n  justify-items: center;\n  align-items: center;\n}\n"],
+  "mappings": "AAAA,CAAC,OACC,WAAY,KACd,CAEA,CAAC,OACC,cAAe,KACjB,CAEA,CAAC,SACC,QAAS,KACT,eAAgB,OAChB,cAAe,OACf,YAAa,MACf",
+  "names": []
+}

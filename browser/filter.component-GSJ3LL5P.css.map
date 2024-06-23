@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/filter/filter.component.css"],
+  "sourcesContent": [".filter-container {\n    position: relative;\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    margin-bottom: 20px;\n  }\n  \n  .fa-filter {\n    cursor: pointer;\n    font-size: 20px;\n  }\n  \n  @media (max-width: 768px) {\n    .filter-container {\n      justify-content: center;\n    }\n  }\n  \n  @media (max-width: 576px) {\n    .filter-container {\n      flex-direction: column;\n      align-items: flex-start;\n    }\n  }\n\n  .filter-container {\n  position: relative;\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  margin: 0 auto 20px; \n}\n\n\n\n@media (max-width: 768px) { /* Telas menores que 768px (tablets) */\n  .filter-container {\n     \n      flex-direction: column;\n      align-items: flex-start;\n  }\n}\n\n@media (max-width: 576px) { /* Telas menores que 576px (celulares) */\n  .filter-container {\n    flex-direction: column;\n      align-items: flex-start;\n  }\n}\n\n\n  "],
+  "mappings": "AAAA,CAAC,iBACG,SAAU,SACV,QAAS,KACT,YAAa,OACb,IAAK,KACL,cAAe,IACjB,CAEA,CAAC,UACC,OAAQ,QACR,UAAW,IACb,CAEA,OAAO,CAAC,SAAS,EAAE,OACjB,CAdH,iBAeK,gBAAiB,MACnB,CACF,CASA,CA1BD,iBA2BC,SAAU,SACV,QAAS,KACT,YAAa,OACb,IAAK,KA9BP,OA+BU,EAAE,KAAK,IACjB,CAIA,OAAO,CAAC,SAAS,EAAE,OACjB,CArCD,iBAuCK,eAAgB,OAChB,YAAa,UACjB,CACF,CAEA,OAAO,CAAC,SAAS,EAAE,OACjB,CA7CD,iBA8CG,eAAgB,OACd,YAAa,UACjB,CACF",
+  "names": []
+}
