@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/prayer/prayer.component.css"],
+  "sourcesContent": ["\nbody {\n    background-image: url('https://cdn.mensagenscomamor.com/content/images/m000446332.jpg?v=1&w=2288&h=1833'); \n    background-size: cover;\n    background-repeat: no-repeat;\n    background-attachment: fixed;\n    margin-top: 100px;\n  }\n  .oracao {\n    text-align: center;\n    margin-bottom: 30px;\n  }\n  .oracao img {\n    width: 100%;\n    height: auto;\n    max-width: 300px; \n    max-height: 200px;\n    border-radius: 10px;\n    display: block;\n    margin: 0 auto; \n  }\n  .texto-biblico {\n    background: rgba(255, 255, 255, 0.8); \n    padding: 10px;\n    border-radius: 10px;\n    margin-top: 10px;\n  }"],
+  "mappings": "AACA,KACI,iBAAkB,sFAClB,gBAAiB,MACjB,kBAAmB,UACnB,sBAAuB,MACvB,WAAY,KACd,CACA,CAAC,OACC,WAAY,OACZ,cAAe,IACjB,CACA,CAJC,OAIO,IACN,MAAO,KACP,OAAQ,KACR,UAAW,MACX,WAAY,MAhBhB,cAiBmB,KACf,QAAS,MAlBb,OAmBY,EAAE,IACZ,CACA,CAAC,cACC,WAAY,MAtBhB,QAuBa,KAvBb,cAwBmB,KACf,WAAY,IACd",
+  "names": []
+}

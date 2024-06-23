@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/about/about.component.css"],
+  "sourcesContent": [".paragraph {\n    font-size: 19px;\n}"],
+  "mappings": "AAAA,CAAC,UACG,UAAW,IACf",
+  "names": []
+}

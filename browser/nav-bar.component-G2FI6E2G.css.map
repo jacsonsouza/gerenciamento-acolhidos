@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/nav-bar/nav-bar.component.css"],
+  "sourcesContent": [".navbar-brand {\n  font-size: 25px;\n  font-weight: 900; /* Bold */\n}\n\n.navbar-nav .nav-link {\n  margin-right: 1rem;\n}\n\n.dropdown-menu {\n  padding: 1rem;\n}\n\n.dropdown-item {\n  margin: 0.5rem 0;\n}\n"],
+  "mappings": "AAAA,CAAC,aACC,UAAW,KACX,YAAa,GACf,CAEA,CAAC,WAAW,CAAC,SACX,aAAc,IAChB,CAEA,CAAC,cATD,QAUW,IACX,CAEA,CAAC,cAbD,OAcU,MAAO,CACjB",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/app.component.css"],
+  "sourcesContent": [".main {\n  margin-top: 100px;\n}\n"],
+  "mappings": "AAAA,CAAC,KACC,WAAY,KACd",
+  "names": []
+}

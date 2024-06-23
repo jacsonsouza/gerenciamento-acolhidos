@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/appointments-list/appointments-list.component.css"],
+  "sourcesContent": [".container {\n  margin-bottom: 30px;\n}\n\n.card {\n  margin: 20px;\n}\n\n.m-100 {\n  margin-top: 300px;\n  margin-bottom: 300px;\n}\n\n.card-link {\n  text-decoration: none;\n}\n"],
+  "mappings": "AAAA,CAAC,UACC,cAAe,IACjB,CAEA,CAAC,KAJD,OAKU,IACV,CAEA,CAAC,MACC,WAAY,MACZ,cAAe,KACjB,CAEA,CAAC,UACC,gBAAiB,IACnB",
+  "names": []
+}

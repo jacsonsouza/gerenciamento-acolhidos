@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/partnerships/partnerships.component.css"],
+  "sourcesContent": ["body {\n    margin-top: 200px;\n}\n\n.card-img-top {\n    width: 100%;\n    height: 150px;\n    object-fit: contain;\n}\n.card-body {\n    padding-top: 0;\n}\n.card-title {\n    margin-bottom: 10px;\n}\n\n.container { \n    text-align: center; \n  }\n\n.container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  }\n  \n  h1 { \n    margin-bottom: 20px;\n  }\n  \n  app-filter { \n    margin-bottom: 20px; \n  }\n  "],
+  "mappings": "AAAA,KACI,WAAY,KAChB,CAEA,CAAC,aACG,MAAO,KACP,OAAQ,MACR,WAAY,OAChB,CACA,CAAC,UACG,YAAa,CACjB,CACA,CAAC,WACG,cAAe,IACnB,CAEA,CAAC,UACG,WAAY,MACd,CAEF,CAJC,UAKG,QAAS,KACT,eAAgB,OAChB,YAAa,MACf,CAEA,GACE,cAAe,IACjB,CAEA,WACE,cAAe,IACjB",
+  "names": []
+}
