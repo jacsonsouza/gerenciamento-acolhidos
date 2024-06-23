@@ -63,10 +63,6 @@ button:hover {
   background-color: #45a049;
 }
 
-.margin-top-page {
-  margin-top: 90px;
-}
-
 /* Media query para telas menores */
 @media (max-width: 600px) {
   body {
@@ -80,4 +76,12 @@ button:hover {
   button {
     font-size: 14px;
   }
+}
+
+.mt-100 {
+  margin-top: 200px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
 }
