@@ -6,8 +6,6 @@ import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormComponent } from './components/form/form.component';
 import { JobsComponent } from './components/jobs/jobs.component';
-import { LoginComponent } from './components/login/login.component';
-
 import { PartnershipsComponent } from './components/partnerships/partnerships.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { LoginComponent } from './components/login/login.component';
