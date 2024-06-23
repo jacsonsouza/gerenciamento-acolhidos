@@ -10,6 +10,7 @@ import {
 } from '@angular/forms';
 import { AppointmentService } from '../../services/appointment/appointment.service';
 import { Status } from '../../enums/appointment/status';
+import { LocaleService } from '../../services/locale/locale.service';
 
 @Component({
   selector: 'app-form',
@@ -22,8 +23,12 @@ import { Status } from '../../enums/appointment/status';
 export class FormComponent {
   registerForm: FormGroup;
 
+  states: any[] = [];
+  cities: any[] = [];
+
   constructor(
     private fb: FormBuilder,
+    private locale: LocaleService,
     private appointment: AppointmentService
   ) {
     this.registerForm = this.fb.group({
@@ -39,6 +44,25 @@ export class FormComponent {
       observation: ['', Validators.required],
       status: [Status.Pending],
     });
+    this.loadStates();
+  }
+
+  loadStates() {
+    this.locale.getStates().subscribe({
+      next: (states) => (this.states = states),
+      error: (error) => console.error('Erro ao buscar estados', error),
+    });
+  }
+
+  onStateChange(event: any) {
+    const estadoId = event.target.value;
+
+    if (estadoId) {
+      this.locale.getCities(estadoId).subscribe({
+        next: (cities) => (this.cities = cities),
+        error: (error) => console.error('Erro ao buscar cidades', error),
+      });
+    }
   }
 
   register(): void {
