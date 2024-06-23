@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href=/gerenciamento-acolhidos/",
-    "ghpages": "angular-cli-ghpages --dir=dist/gerenciamento-acolhidos",
+    "build": "ng build --base-href=/gerenciamento-acolhidos/",
+    "ghpages": "angular-cli-ghpages --dir dist/gerenciamento-acolhidos --no-silent",
     "deploy": "npm run build & npm run ghpages",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -46,6 +46,7 @@
     "@types/crypto-js": "^4.2.2",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^20.14.2",
+    "angular-cli-ghpages": "^2.0.1",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
